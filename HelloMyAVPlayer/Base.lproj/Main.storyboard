@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIg-4G-Ept">
+                                <rect key="frame" x="20" y="28" width="130" height="30"/>
+                                <state key="normal" title="Play Remote Movie"/>
+                                <connections>
+                                    <action selector="playRemoteMovieBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oyt-8e-Rbh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-zO-WaW">
+                                <rect key="frame" x="20" y="66" width="114" height="30"/>
+                                <state key="normal" title="Play Local Movie"/>
+                                <connections>
+                                    <action selector="playLocalMovieBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zXI-bM-m9a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2q-YQ-JYq">
+                                <rect key="frame" x="20" y="104" width="121" height="30"/>
+                                <state key="normal" title="Play Remote MP3"/>
+                                <connections>
+                                    <action selector="playRemoteMP3BtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Dv-HW-YL3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXJ-RR-cE2">
+                                <rect key="frame" x="479" y="66" width="101" height="30"/>
+                                <state key="normal" title="Get Thumbnail"/>
+                                <connections>
+                                    <action selector="getThumbnailBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XDp-ls-yH8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kf6-Aa-Qyw">
+                                <rect key="frame" x="442" y="104" width="138" height="30"/>
+                                <state key="normal" title="FullScreen Playback"/>
+                                <connections>
+                                    <segue destination="mqD-20-rLX" kind="show" identifier="fullscreenPlayback" id="uJ5-kB-wiV"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jVn-jK-04B">
+                                <rect key="frame" x="20" y="142" width="560" height="438"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHV-yn-3FQ">
+                                <rect key="frame" x="548" y="28" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ugw-n2-VNm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bHV-yn-3FQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2n1-9C-8fg"/>
+                            <constraint firstItem="jVn-jK-04B" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="EVJ-pT-yxE"/>
+                            <constraint firstItem="TXJ-RR-cE2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GFF-mY-q3d"/>
+                            <constraint firstItem="fn8-zO-WaW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JpX-xW-YSX"/>
+                            <constraint firstItem="MIg-4G-Ept" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="O2J-wl-ZaE"/>
+                            <constraint firstItem="TXJ-RR-cE2" firstAttribute="top" secondItem="bHV-yn-3FQ" secondAttribute="bottom" constant="8" id="WCX-xP-GPx"/>
+                            <constraint firstItem="jVn-jK-04B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zdt-vb-X1c"/>
+                            <constraint firstItem="kf6-Aa-Qyw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bh5-KK-9sm"/>
+                            <constraint firstItem="jVn-jK-04B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="142" id="cTm-qV-sle"/>
+                            <constraint firstItem="MIg-4G-Ept" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="doA-Xe-oZK"/>
+                            <constraint firstItem="a2q-YQ-JYq" firstAttribute="top" secondItem="fn8-zO-WaW" secondAttribute="bottom" constant="8" id="e3p-xJ-3MW"/>
+                            <constraint firstItem="fn8-zO-WaW" firstAttribute="top" secondItem="MIg-4G-Ept" secondAttribute="bottom" constant="8" id="igC-8g-2c1"/>
+                            <constraint firstItem="bHV-yn-3FQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="jHt-5M-mJM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jVn-jK-04B" secondAttribute="bottom" constant="20" id="jtL-nC-iIh"/>
+                            <constraint firstItem="kf6-Aa-Qyw" firstAttribute="top" secondItem="TXJ-RR-cE2" secondAttribute="bottom" constant="8" id="yeB-G6-aq2"/>
+                            <constraint firstItem="a2q-YQ-JYq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zTb-f9-Pc7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultImageView" destination="jVn-jK-04B" id="GmC-fC-kIj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="318"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="CMB-oh-RsX">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="mqD-20-rLX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lqD-Ai-MjG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1027" y="318"/>
+        </scene>
+    </scenes>
+</document>
